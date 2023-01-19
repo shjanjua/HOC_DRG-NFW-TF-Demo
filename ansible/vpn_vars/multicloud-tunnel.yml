@@ -1,0 +1,19 @@
+---
+#Name for the VPN Connetion
+multicloud_conn_name_tunnel1: oci-tunnel1
+multicloud_conn_name_tunnel2: oci-tunnel2
+
+#Connection settings
+multicloud_tunnel1_cidr: "10.10.20.1/30"
+multicloud_tunnel2_cidr: "10.10.20.5/30"
+multicloud_left: "{{ multicloud_cpe_local_ip }}"
+multicloud_tunnel1_right: "{{ multicloud_oci_tunnel1_headend }}"
+multicloud_tunnel2_right: "{{ multicloud_oci_tunnel2_headend }}"
+multicloud_vti1: "vti1"
+multicloud_vti2: "vti2"
+multicloud_oci_vcn_cidr: "{{ multicloud_oci_vcn_cidr }}"
+multicloud_tunnel1_leftvti: "10.10.20.1/30"
+multicloud_tunnel2_leftvti: "10.10.20.5/30"
+#PSK to be used. 
+multicloud_vpn_psk1: "{{ multicloud_shared_secret_psk1 }}"
+multicloud_vpn_psk2: "{{ multicloud_shared_secret_psk2 }}"

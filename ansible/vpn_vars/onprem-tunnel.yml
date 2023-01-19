@@ -1,0 +1,19 @@
+---
+#Name for the VPN Connetion
+onprem_conn_name_tunnel1: oci-tunnel1
+onprem_conn_name_tunnel2: oci-tunnel2
+
+#Connection settings
+onprem_tunnel1_cidr: "10.10.10.1/30"
+onprem_tunnel2_cidr: "10.10.10.5/30"
+onprem_left: "{{ onprem_cpe_local_ip }}"
+onprem_tunnel1_right: "{{ onprem_oci_tunnel1_headend }}"
+onprem_tunnel2_right: "{{ onprem_oci_tunnel2_headend }}"
+onprem_vti1: "vti1"
+onprem_vti2: "vti2"
+onprem_oci_vcn_cidr: "{{ onprem_oci_vcn_cidr }}"
+onprem_tunnel1_leftvti: "10.10.10.1/30"
+onprem_tunnel2_leftvti: "10.10.10.5/30"
+#PSK to be used. 
+onprem_vpn_psk1: "{{ onprem_shared_secret_psk1 }}"
+onprem_vpn_psk2: "{{ onprem_shared_secret_psk2 }}"
